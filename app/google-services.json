@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "822609956424",
+    "firebase_url": "https://ecard-922ef.firebaseio.com",
+    "project_id": "ecard-922ef",
+    "storage_bucket": "ecard-922ef.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:822609956424:android:4e516e5134d065502f127d",
+        "android_client_info": {
+          "package_name": "com.pkdev.ecard"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "822609956424-35tq15fp60b8fh0fl11kjpen1sg7p93k.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.pkdev.ecard",
+            "certificate_hash": "65f001369bf1aae03ca03895d617c8575a829520"
+          }
+        },
+        {
+          "client_id": "822609956424-98r70p6ke79rvqnddrf3tdpvpa2n705t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA0U6wNV8vi74JuuvA18NUu1R6pphiAYXU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "822609956424-98r70p6ke79rvqnddrf3tdpvpa2n705t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

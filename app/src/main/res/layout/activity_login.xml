@@ -8,175 +8,170 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="#00CF2828">
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_gravity="center_vertical"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical">
 
             <LinearLayout
-                android:paddingHorizontal="30dp"
-                android:gravity="center_horizontal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
-                android:orientation="vertical">
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:paddingHorizontal="30dp">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/balooda2_semibold"
                     android:text="Welcome back!"
-                    android:textStyle="bold"
-                    android:textSize="30dp"
                     android:textColor="@android:color/black"
-                    android:fontFamily="@font/balooda2_semibold"/>
+                    android:textSize="30dp"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/balooda2_regular"
                     android:text="login to your existing account of E-Card"
-                    android:textSize="15dp"
                     android:textColor="@android:color/black"
-                    android:fontFamily="@font/balooda2_regular"/>
-
-                <TextView
-                    android:id="@+id/login_mail"
-                    android:layout_marginTop="20dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/hollow_button"
-                    android:text="pkrmehta66@gmail.com"
-                    android:paddingHorizontal="40dp"
-                    android:textStyle="bold"
-                    android:textColor="#0094FF"
-                    android:paddingVertical="10dp"/>
+                    android:textSize="15dp" />
 
                 <EditText
-                    android:layout_below="@id/login_mail"
-                    android:id="@+id/login_password"
-                    android:layout_marginTop="20dp"
+                    android:id="@+id/login_mail"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Password"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/hollow_button"
+                    android:hint="email"
+                    android:paddingHorizontal="30dp"
+                    android:paddingVertical="10dp"
+                    android:textColor="#0094FF"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/login_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/login_mail"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/hollow_button"
+                    android:hint="password"
                     android:inputType="textPassword"
                     android:paddingHorizontal="30dp"
                     android:paddingVertical="10dp"
-                    android:textSize="15dp"
-                    android:background="@drawable/hollow_button"/>
-
-
+                    android:textColor="#0094FF"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
 
                 <Button
                     android:id="@+id/login_forgotPassword"
-                    android:layout_gravity="right"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@android:color/transparent"
-                    android:text="Forgot Password?"
-                    android:textAllCaps="false"
+                    android:layout_gravity="right"
                     android:layout_marginTop="20dp"
-                    android:fontFamily="@font/balooda2_bold"/>
+                    android:background="@android:color/transparent"
+                    android:fontFamily="@font/balooda2_bold"
+                    android:text="Forgot Password?"
+                    android:textAllCaps="false" />
 
                 <Button
                     android:id="@+id/login_login"
-                    android:elevation="5dp"
-                    android:layout_marginBottom="10dp"
                     android:layout_width="wrap_content"
                     android:layout_height="40dp"
-                    android:text="Log in"
                     android:layout_gravity="center"
-                    android:textSize="15dp"
-                    android:fontFamily="@font/balooda2_regular"
-                    android:textStyle="bold"
-                    android:textColor="@android:color/white"
+                    android:layout_marginBottom="10dp"
                     android:background="@drawable/solid_button"
-                    android:paddingHorizontal="50dp"/>
+                    android:elevation="5dp"
+                    android:fontFamily="@font/balooda2_regular"
+                    android:paddingHorizontal="50dp"
+                    android:text="Log in"
+                    android:textColor="@android:color/white"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
 
                 <LinearLayout
                     android:id="@+id/temp_ll"
-                    android:layout_marginTop="70dp"
-                    android:gravity="center"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="70dp"
+                    android:gravity="center"
                     android:orientation="vertical">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Or connect using"/>
+                        android:text="Or connect using" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="40dp"
-                        android:orientation="horizontal"
                         android:layout_marginTop="10dp"
+                        android:orientation="horizontal"
                         android:weightSum="2">
 
                         <Button
                             android:id="@+id/login_facebook"
-                            android:layout_marginRight="10dp"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Facebook"
-                            android:textAllCaps="false"
+                            android:layout_marginRight="10dp"
                             android:layout_weight="1"
                             android:background="@drawable/fb_button"
-                            android:textColor="@android:color/white"
-                            />
+                            android:text="Facebook"
+                            android:textAllCaps="false"
+                            android:textColor="@android:color/white" />
 
                         <Button
                             android:id="@+id/login_google"
-                            android:layout_marginLeft="10dp"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Google"
-                            android:textAllCaps="false"
+                            android:layout_marginLeft="10dp"
                             android:layout_weight="1"
                             android:background="@drawable/google_button"
-                            android:textColor="@android:color/white"
-                            />
+                            android:text="Google"
+                            android:textAllCaps="false"
+                            android:textColor="@android:color/white" />
 
                     </LinearLayout>
-
-
 
 
                 </LinearLayout>
 
 
                 <LinearLayout
-                    android:layout_marginTop="100dp"
-                    android:gravity="center_horizontal"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="100dp"
+                    android:gravity="center_horizontal"
                     android:orientation="horizontal">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Don't have an account?"
                         android:fontFamily="@font/balooda2_semibold"
-                        android:textColor="@android:color/black"/>
+                        android:text="Don't have an account?"
+                        android:textColor="@android:color/black" />
 
                     <TextView
                         android:id="@+id/login_signup"
-                        android:clickable="true"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Sign Up"
-                        android:textSize="15.2dp"
                         android:layout_marginLeft="10dp"
+                        android:clickable="true"
+                        android:fontFamily="@font/balooda2_bold"
+                        android:text="Sign Up"
                         android:textColor="#0094FF"
-                        android:fontFamily="@font/balooda2_bold"/>
+                        android:textSize="15.2dp" />
                 </LinearLayout>
             </LinearLayout>
 
 
-
-
         </RelativeLayout>
-
 
 
     </ScrollView>

@@ -42,11 +42,24 @@
 
                 <EditText
                     android:fontFamily="@font/balooda2_semibold"
+                    android:id="@+id/signup_name"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="name"
+                    android:inputType="textEmailAddress"
+                    android:paddingHorizontal="30dp"
+                    android:paddingVertical="10dp"
+                    android:textSize="15dp"
+                    android:background="@drawable/hollow_button"/>
+
+                <EditText
+                    android:fontFamily="@font/balooda2_semibold"
                     android:id="@+id/signup_mail"
                     android:layout_marginTop="20dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="E-mail"
+                    android:hint="email"
                     android:inputType="textEmailAddress"
                     android:paddingHorizontal="30dp"
                     android:paddingVertical="10dp"
@@ -60,7 +73,7 @@
                     android:layout_marginTop="20dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Password"
+                    android:hint="password"
                     android:inputType="textPassword"
                     android:paddingHorizontal="30dp"
                     android:paddingVertical="10dp"
