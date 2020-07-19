@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_marginTop="30dp"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginHorizontal="25dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_gravity="center_vertical"
+            android:id="@+id/listContact_image"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/pic"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/listContact_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Devashish Thakur"
+                android:fontFamily="@font/balooda2_bold"
+                android:textSize="20dp"
+                android:textColor="@android:color/black"/>
+
+            <TextView
+                android:layout_marginTop="-10dp"
+                android:id="@+id/listContact_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Android Developer, E-Card"
+                android:fontFamily="@font/balooda2_semibold"
+                android:textSize="16dp"
+                android:textColor="@android:color/black"/>
+
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+
+
+
+</RelativeLayout>
