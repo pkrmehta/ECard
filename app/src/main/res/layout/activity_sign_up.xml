@@ -48,6 +48,7 @@
                     android:inputType="textEmailAddress"
                     android:paddingHorizontal="30dp"
                     android:paddingVertical="10dp"
+                    android:fontFamily="@font/balooda2_semibold"
                     android:textSize="15sp"
                     android:background="@drawable/hollow_button"/>
 
@@ -58,6 +59,7 @@
                     android:layout_height="wrap_content"
                     android:hint="email"
                     android:inputType="textEmailAddress"
+                    android:fontFamily="@font/balooda2_semibold"
                     android:paddingHorizontal="30dp"
                     android:paddingVertical="10dp"
                     android:textSize="15sp"
@@ -71,6 +73,7 @@
                     android:layout_height="match_parent"
                     android:hint="password"
                     android:inputType="textPassword"
+                    android:fontFamily="@font/balooda2_semibold"
                     android:paddingHorizontal="30dp"
                     android:paddingVertical="10dp"
                     android:textSize="15sp"
@@ -104,6 +107,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:fontFamily="@font/balooda2_semibold"
                         android:text="Or connect using"/>
 
                     <LinearLayout
