@@ -16,7 +16,6 @@
             android:layout_height="match_parent">
 
             <LinearLayout
-                android:paddingHorizontal="30dp"
                 android:gravity="center_horizontal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -34,14 +33,13 @@
 
                 <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Sign-up and create account of E-Card"
+                    android:layout_height="match_parent"
+                    android:text="Sign-up  and  create  account  of  E-Card"
                     android:textSize="15dp"
                     android:textColor="@android:color/black"
                     android:fontFamily="@font/balooda2_regular"/>
 
                 <EditText
-                    android:fontFamily="@font/balooda2_semibold"
                     android:id="@+id/signup_name"
                     android:layout_marginTop="20dp"
                     android:layout_width="match_parent"
@@ -50,11 +48,10 @@
                     android:inputType="textEmailAddress"
                     android:paddingHorizontal="30dp"
                     android:paddingVertical="10dp"
-                    android:textSize="15dp"
+                    android:textSize="15sp"
                     android:background="@drawable/hollow_button"/>
 
                 <EditText
-                    android:fontFamily="@font/balooda2_semibold"
                     android:id="@+id/signup_mail"
                     android:layout_marginTop="20dp"
                     android:layout_width="match_parent"
@@ -63,21 +60,20 @@
                     android:inputType="textEmailAddress"
                     android:paddingHorizontal="30dp"
                     android:paddingVertical="10dp"
-                    android:textSize="15dp"
+                    android:textSize="15sp"
                     android:background="@drawable/hollow_button"/>
 
                 <EditText
-                    android:fontFamily="@font/balooda2_semibold"
                     android:layout_below="@id/signup_mail"
                     android:id="@+id/signup_password"
                     android:layout_marginTop="20dp"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:hint="password"
                     android:inputType="textPassword"
                     android:paddingHorizontal="30dp"
                     android:paddingVertical="10dp"
-                    android:textSize="15dp"
+                    android:textSize="15sp"
                     android:background="@drawable/hollow_button"/>
 
 
