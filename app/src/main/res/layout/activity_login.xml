@@ -37,7 +37,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/balooda2_regular"
-                    android:text="login to your existing account of E-Card"
+                    android:text="Login to your existing account of E-Card"
                     android:textColor="@android:color/black"
                     android:textSize="15dp" />
 
@@ -50,9 +50,10 @@
                     android:hint="email"
                     android:paddingHorizontal="30dp"
                     android:paddingVertical="10dp"
+                    android:fontFamily="@font/balooda2_semibold"
                     android:textColor="#0094FF"
                     android:textSize="15sp"
-                    android:textStyle="bold" />
+                    />
 
                 <EditText
                     android:id="@+id/login_password"
@@ -66,8 +67,9 @@
                     android:paddingHorizontal="30dp"
                     android:paddingVertical="10dp"
                     android:textColor="#0094FF"
+                    android:fontFamily="@font/balooda2_semibold"
                     android:textSize="15sp"
-                    android:textStyle="bold" />
+                    />
 
                 <Button
                     android:id="@+id/login_forgotPassword"
@@ -106,7 +108,9 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Or connect using" />
+                        android:text="Or connect using"
+                        android:fontFamily="@font/balooda2_semibold"
+                        />
 
                     <LinearLayout
                         android:layout_width="match_parent"
