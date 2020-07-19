@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">ECard</string>
+    <string name="facebook_app_id">274181400540844</string>
+    <string name="fb_login_protocol_scheme">fb274181400540844</string>
 </resources>

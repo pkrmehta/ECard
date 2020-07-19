@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import com.facebook.login.LoginManager;
 import com.google.android.gms.auth.api.Auth;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
@@ -36,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 FirebaseAuth.getInstance().signOut();
                 createRequest();
+                LoginManager.getInstance().logOut();
                 mGoogleSignInClient.signOut();
                 startActivity(new Intent(MainActivity.this, Login.class));
             }
@@ -43,8 +45,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void createRequest() {
-
-
         // Configure Google Sign In
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestIdToken(getString(R.string.default_web_client_id))
@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
         super.onStart();
         // Check if user is signed in (non-null) and update UI accordingly.
         FirebaseUser currentUser = mAuth.getCurrentUser();
-        if (currentUser == null || !currentUser.isEmailVerified()) {
+        if (currentUser == null) {
             Intent startIntent = new Intent(MainActivity.this, Login.class);
             startActivity(startIntent);
             finish();
