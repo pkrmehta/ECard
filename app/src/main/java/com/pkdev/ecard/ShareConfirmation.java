@@ -19,7 +19,7 @@ import java.util.HashMap;
 
 public class ShareConfirmation extends AppCompatActivity {
 
-    String shareId,userId;
+    String shareId, userId;
     FirebaseFirestore mDatabase = FirebaseFirestore.getInstance();
     ProgressDialog pd;
 
@@ -34,15 +34,14 @@ public class ShareConfirmation extends AppCompatActivity {
         pd.setTitle("Loading....");
         pd.setMessage("Please Wait");
 
-
         shareId = getIntent().getStringExtra("USER_ID");
         userId = FirebaseAuth.getInstance().getCurrentUser().getUid();
 
-        final HashMap<String,String> hashUser = new HashMap<>();
-        hashUser.put("userid",userId);
+        final HashMap<String, String> hashUser = new HashMap<>();
+        hashUser.put("userid", userId);
 
-        final HashMap<String,String> hashShare = new HashMap<>();
-        hashShare.put("userid",shareId);
+        final HashMap<String, String> hashShare = new HashMap<>();
+        hashShare.put("userid", shareId);
 
         findViewById(R.id.accept).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -51,13 +50,19 @@ public class ShareConfirmation extends AppCompatActivity {
                 mDatabase.collection("users").document(shareId).collection("contacts").document(userId).set(hashUser).addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
-                        mDatabase.collection("users").document(userId).collection("contacts").document(shareId).set(hashShare).addOnCompleteListener(new OnCompleteListener<Void>() {
-                            @Override
-                            public void onComplete(@NonNull Task<Void> task) {
-                                pd.dismiss();
-                                Toast.makeText(ShareConfirmation.this,"Success",Toast.LENGTH_LONG).show();
-                            }
-                        });
+                        if (task.isSuccessful()) {
+                            mDatabase.collection("users").document(userId).collection("contacts").document(shareId).set(hashShare).addOnCompleteListener(new OnCompleteListener<Void>() {
+                                @Override
+                                public void onComplete(@NonNull Task<Void> task) {
+                                    if (task.isSuccessful()) {
+                                        pd.dismiss();
+                                        Toast.makeText(ShareConfirmation.this, "Success", Toast.LENGTH_LONG).show();
+                                    } else {
+                                        mDatabase.collection("users").document(shareId).collection("contacts").document(userId).delete();
+                                    }
+                                }
+                            });
+                        }
                     }
                 });
 
