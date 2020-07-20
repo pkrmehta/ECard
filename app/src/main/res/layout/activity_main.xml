@@ -7,16 +7,16 @@
     tools:context=".MainActivity">
 
     <RelativeLayout
+        android:id="@+id/topnav"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="20dp">
 
-
         <ImageButton
             android:id="@+id/home_myinfo"
             android:layout_centerVertical="true"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:scaleType="centerInside"
             android:background="@android:color/transparent"
             android:src="@drawable/ic_perm_identity_black_24dp"/>
@@ -25,8 +25,8 @@
             android:id="@+id/home_mycontact"
             android:layout_centerVertical="true"
             android:layout_alignParentRight="true"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:scaleType="centerInside"
             android:background="@android:color/transparent"
             android:src="@drawable/ic_supervisor_account_black_24dp"/>
@@ -37,87 +37,75 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:gravity="center_horizontal"
-        android:layout_centerInParent="true"
+        android:layout_below="@id/topnav"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"
         android:padding="20dp">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Send/Receive Through QR Code!"
-            android:fontFamily="@font/balooda2_bold"
+            android:fontFamily="@font/balooda2_semibold"
             android:textColor="@android:color/black"
-            android:textSize="20dp"/>
+            android:textSize="18sp"/>
 
         <ImageView
             android:id="@+id/home_qrcode"
             android:layout_width="match_parent"
-            android:layout_height="250dp"
+            android:layout_height="128dp"
             android:layout_marginHorizontal="20dp"
-            android:layout_marginTop="20dp"
-            android:src="@drawable/qrimage"/>
-        
+            android:layout_marginTop="30dp"
+            android:src="@drawable/qrimage" />
+
         <ImageButton
             android:id="@+id/home_camera"
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:scaleType="centerInside"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="30dp"
             android:background="@android:color/transparent"
-            android:src="@drawable/ic_photo_camera_black_24dp"/>
+            android:scaleType="centerInside"
+            android:src="@drawable/camera" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="OR"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="30dp"
             android:fontFamily="@font/balooda2_bold"
             android:textSize="20dp"/>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Send Direct Invite"
-            android:fontFamily="@font/balooda2_bold"
-            android:textSize="18dp"
-            android:textColor="#0094FF"/>
-
         <LinearLayout
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:weightSum="2"
-            android:orientation="horizontal">
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="Send Direct Invite"
+                android:fontFamily="@font/balooda2_bold"
+                android:textSize="18dp"
+                android:textColor="#0094FF"/>
 
             <Button
-                android:layout_marginHorizontal="10dp"
+                android:layout_gravity="center_horizontal"
+
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/balooda2_bold"
                 android:background="@drawable/solid_button"
                 android:layout_weight="1"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="10dp"
                 android:text="SEND"
                 android:textColor="@android:color/white"
                 />
 
-            <Button
-                android:layout_marginHorizontal="10dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/solid_button"
-                android:layout_weight="1"
-                android:text="Receive"
-                android:textColor="@android:color/white"
-                />
-
-
         </LinearLayout>
-
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="LOGOUT"
-            android:id="@+id/next"/>
-
-
 
     </LinearLayout>
 
