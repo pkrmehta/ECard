@@ -35,7 +35,7 @@
         </RelativeLayout>
 
         <androidx.recyclerview.widget.RecyclerView
-            android:padding="20dp"
+            android:paddingHorizontal="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/myContact_list"/>

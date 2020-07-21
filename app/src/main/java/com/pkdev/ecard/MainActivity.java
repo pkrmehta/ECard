@@ -72,6 +72,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        findViewById(R.id.home_mycontact).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this,MyContacts.class);
+                startActivity(intent);
+            }
+        });
+
         findViewById(R.id.home_send).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
