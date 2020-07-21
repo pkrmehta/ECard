@@ -55,7 +55,6 @@ public class MyContacts extends AppCompatActivity {
                         Contact contact = doc.toObject(Contact.class);
                         contactList.add(contact);
                     }
-
                     contactAdapter = new ContactAdapter(MyContacts.this, contactList);
                     mContactList.setAdapter(contactAdapter);
                     //If ProgressDialog is showing Dismiss it
@@ -63,7 +62,6 @@ public class MyContacts extends AppCompatActivity {
                     {
                         pd.dismiss();
                     }
-
                 }
                 else {
                     pd.dismiss();
