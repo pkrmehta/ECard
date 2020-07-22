@@ -49,6 +49,11 @@ public class ForgotPassword extends AppCompatActivity {
             }
         });
     }
+
+    /**
+     * description : this method is used to send forgot pass email to user
+     * @param email : email specified by the user to get the reset mail
+     */
     private void sendForgotPassEmail(String email){
         mAuth.sendPasswordResetEmail(email).addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override
