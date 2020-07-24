@@ -20,6 +20,7 @@
                 <data android:host="ecardapp" android:scheme="http" />
             </intent-filter>
         </activity>
+        <activity android:name=".ContactDetails"></activity>
         <activity android:name=".MyContacts" />
         <activity android:name=".ForgotPassword" />
         <activity android:name=".SignUp" />

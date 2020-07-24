@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:gravity="center_horizontal"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_marginTop="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Email"
+        android:textColor="@android:color/black"
+        android:textSize="17dp"
+        android:fontFamily="@font/balooda2_bold"/>
+    \
+    <EditText
+        android:maxLength="10"
+        android:layout_marginTop="10dp"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:paddingHorizontal="10dp"
+        android:inputType="textEmailAddress"
+        android:id="@+id/popupEmail_email"
+        android:hint="Email"/>
+
+    <LinearLayout
+        android:layout_marginTop="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Set as primary email?"/>
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/popupEmail_primaryCheck"/>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_marginBottom="30dp"
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="50dp"
+        android:weightSum="2"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_marginHorizontal="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="Cancel"
+            android:layout_weight="1"
+            android:background="@drawable/solid_button"
+            android:textColor="@android:color/white"
+            android:id="@+id/popupEmail_cancel"/>
+
+        <Button
+            android:layout_marginHorizontal="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="Save"
+            android:layout_weight="1"
+            android:background="@drawable/solid_button"
+            android:textColor="@android:color/white"
+            android:id="@+id/popupEmail_save"/>
+
+
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
