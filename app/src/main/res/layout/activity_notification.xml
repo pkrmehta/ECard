@@ -35,7 +35,7 @@
         />
 
     <LinearLayout
-        android:padding="10dp"
+        android:padding="5dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical">
@@ -45,9 +45,6 @@
             android:layout_height="wrap_content"
             android:id="@+id/notification_recyclerView"
             android:scrollbarStyle="insideOverlay"/>
-
-
-
     </LinearLayout>
 
 </LinearLayout>

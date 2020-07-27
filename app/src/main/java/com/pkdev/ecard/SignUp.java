@@ -115,6 +115,8 @@ public class SignUp extends AppCompatActivity {
                             userMap.put("name", nameField.getText().toString());
                             userMap.put("email", usernameField.getText().toString());
                             userMap.put("userid", uid);
+                            userMap.put("image","default");
+                            userMap.put("title","Hey There! I am using ECard");
 
                             mDatabase.collection("users").document(uid).set(userMap).addOnCompleteListener(new OnCompleteListener<Void>() {
                                 @Override
@@ -182,6 +184,8 @@ public class SignUp extends AppCompatActivity {
                             userMap.put("name", acct.getDisplayName());
                             userMap.put("email", acct.getEmail());
                             userMap.put("userid", user.getUid());
+                            userMap.put("image","default");
+                            userMap.put("title","Hey There! I am using ECard");
 
                             mDatabase.collection("users").document(user.getUid()).set(userMap, SetOptions.merge()).addOnCompleteListener(new OnCompleteListener<Void>() {
                                 @Override
@@ -247,6 +251,11 @@ public class SignUp extends AppCompatActivity {
                             final FirebaseUser user = mAuth.getCurrentUser();
                             HashMap<String, String> userMap = new HashMap<>();
                             userMap.put("userid", user.getUid());
+                            userMap.put("name","not speicfied");
+                            userMap.put("email","not specified");
+                            userMap.put("image","default");
+                            userMap.put("title","Hey There! I am using ECard");
+
                             mDatabase.collection("users").document(user.getUid()).set(userMap, SetOptions.merge()).addOnCompleteListener(new OnCompleteListener<Void>() {
                                 @Override
                                 public void onComplete(@NonNull Task<Void> task) {

@@ -71,6 +71,34 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        findViewById(R.id.home_mycontact).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this,MyContacts.class);
+                startActivity(intent);
+            }
+        });
+
+        findViewById(R.id.home_notification).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this,Notification.class);
+                startActivity(intent);
+            }
+        });
+
+        findViewById(R.id.home_send).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent sendIntent = new Intent();
+                sendIntent.setAction(Intent.ACTION_SEND);
+                sendIntent.putExtra(Intent.EXTRA_TEXT, "https://ecardapp.page.link/?link=https://ecardapp/"+currentUser.getUid()+"&apn=com.pkdev.ecard&efr=1");
+                sendIntent.setType("text/plain");
+                Intent shareIntent = Intent.createChooser(sendIntent, null);
+                startActivity(shareIntent);
+            }
+        });
     }
 
     @Override
@@ -93,7 +121,7 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(this, "You cancelled the scanning", Toast.LENGTH_LONG).show();
             }
             else {
-                Intent intent = new Intent(MainActivity.this,ShareConfirmation.class);
+                Intent intent = new Intent(MainActivity.this,Receive.class);
                 intent.putExtra("USER_ID",result.getContents());
                 startActivity(intent);
             }

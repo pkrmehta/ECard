@@ -60,12 +60,13 @@
                     android:id="@+id/contactDetails_name"/>
 
                 <TextView
-                    android:layout_marginTop="-8dp"
+                    android:id="@+id/contactDetails_title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Android Developer, E-Card"
+                    android:layout_marginTop="-8dp"
                     android:fontFamily="@font/balooda2_semibold"
-                    android:textSize="16dp"/>
+                    android:text="Android Developer, E-Card"
+                    android:textSize="16dp" />
 
                 <View
                     android:layout_marginTop="5dp"
