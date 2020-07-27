@@ -1,16 +1,11 @@
 package com.pkdev.ecard.model;
 
 public class Phone {
-    String countrycode,number,phoneid,isprimary;
+    String number,code,type;
 
-    public String getCountrycode() {
-        return countrycode;
+    public Phone(){
+
     }
-
-    public void setCountrycode(String countrycode) {
-        this.countrycode = countrycode;
-    }
-
     public String getNumber() {
         return number;
     }
@@ -19,29 +14,25 @@ public class Phone {
         this.number = number;
     }
 
-    public String getPhoneid() {
-        return phoneid;
+    public String getCode() {
+        return code;
     }
 
-    public void setPhoneid(String phoneid) {
-        this.phoneid = phoneid;
+    public void setCode(String code) {
+        this.code = code;
     }
 
-    public String getIsprimary() {
-        return isprimary;
+    public String getType() {
+        return type;
     }
 
-    public void setIsprimary(String isprimary) {
-        this.isprimary = isprimary;
+    public void setType(String type) {
+        this.type = type;
     }
 
-    public Phone(){
-
-    }
-    public Phone(String countrycode, String number, String phoneid, String isprimary) {
-        this.countrycode = countrycode;
+    public Phone(String number, String code, String type) {
         this.number = number;
-        this.phoneid = phoneid;
-        this.isprimary = isprimary;
+        this.code = code;
+        this.type = type;
     }
 }

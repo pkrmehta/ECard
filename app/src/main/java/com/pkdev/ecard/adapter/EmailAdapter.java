@@ -38,6 +38,7 @@ public class EmailAdapter extends RecyclerView.Adapter<EmailAdapter.TestViewHold
     public void onBindViewHolder(@NonNull TestViewHolder holder, int position) {
         Email email = emailList.get(position);
         holder.emailAddress.setText(email.getEmail());
+        holder.emailType.setText(email.getType());
     }
 
     @Override
@@ -47,10 +48,11 @@ public class EmailAdapter extends RecyclerView.Adapter<EmailAdapter.TestViewHold
 
     class TestViewHolder extends RecyclerView.ViewHolder
     {
-        TextView emailAddress;
+        TextView emailAddress,emailType;
         public TestViewHolder(View itemView) {
             super(itemView);
             emailAddress = (TextView) itemView.findViewById(R.id.listEmail_email);
+            emailType = (TextView) itemView.findViewById(R.id.listEmail_type);
         }
     }
 }

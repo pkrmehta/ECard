@@ -80,6 +80,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        findViewById(R.id.home_notification).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this,Notification.class);
+                startActivity(intent);
+            }
+        });
+
         findViewById(R.id.home_send).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -113,7 +121,7 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(this, "You cancelled the scanning", Toast.LENGTH_LONG).show();
             }
             else {
-                Intent intent = new Intent(MainActivity.this,ShareConfirmation.class);
+                Intent intent = new Intent(MainActivity.this,Receive.class);
                 intent.putExtra("USER_ID",result.getContents());
                 startActivity(intent);
             }

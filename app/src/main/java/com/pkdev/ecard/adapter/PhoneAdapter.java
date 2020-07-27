@@ -39,7 +39,6 @@ public class PhoneAdapter extends RecyclerView.Adapter<PhoneAdapter.TestViewHold
         Phone phone = phoneList.get(position);
 
         holder.number.setText(phone.getNumber());
-        holder.countrycode.setText(phone.getCountrycode());
     }
 
     @Override

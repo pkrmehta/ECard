@@ -14,8 +14,6 @@ import android.widget.Toast;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 
@@ -24,7 +22,8 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 
-public class ShareConfirmation extends AppCompatActivity {
+public class Receive extends AppCompatActivity {
+
 
     String shareId, userId;
     FirebaseFirestore mDatabase = FirebaseFirestore.getInstance();
@@ -38,9 +37,9 @@ public class ShareConfirmation extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_share_confirmation);
+        setContentView(R.layout.activity_receive);
 
-        pd = new ProgressDialog(ShareConfirmation.this);
+        pd = new ProgressDialog(Receive.this);
         pd.setCanceledOnTouchOutside(false);
         pd.setCancelable(true);
         pd.setTitle("Loading....");
@@ -77,7 +76,7 @@ public class ShareConfirmation extends AppCompatActivity {
                         }
                     });
                 } else {
-                    Toast.makeText(ShareConfirmation.this, "Exception", Toast.LENGTH_LONG).show();
+                    Toast.makeText(Receive.this, "Exception", Toast.LENGTH_LONG).show();
                 }
             }
         });
@@ -118,7 +117,6 @@ public class ShareConfirmation extends AppCompatActivity {
                     hashShare.put("title", shareTitle);
                     hashShare.put("image", shareImage);
                     hashShare.put("saved", "false");
-                    pd.dismiss();
                 }
             }
         });
@@ -140,6 +138,7 @@ public class ShareConfirmation extends AppCompatActivity {
                 }
             }
         });
+        pd.dismiss();
     }
 
     /**
@@ -151,11 +150,9 @@ public class ShareConfirmation extends AppCompatActivity {
         String timeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
         HashMap<String, String> notification = new HashMap<String, String>();
         notification.put("contactid", userId);
-        notification.put("desc", "Shared contact with you");
-        notification.put("name", userName);
-        notification.put("time", timeStamp);
-        notification.put("heading","Shared Contact");
-        notification.put("icon","icon");
+        notification.put("type", "shared_contact");
+        notification.put("receivername", userName);
+        notification.put("timestamp", timeStamp);
 
         pd.show();
         mDatabase.collection("users").document(shareId).collection("notifications").document(userId).set(notification).addOnCompleteListener(new OnCompleteListener<Void>() {
@@ -163,9 +160,8 @@ public class ShareConfirmation extends AppCompatActivity {
             public void onComplete(@NonNull Task<Void> task) {
                 if (task.isSuccessful()) {
                     pd.dismiss();
-                    Intent intent = new Intent(ShareConfirmation.this,Congrats.class);
+                    Intent intent = new Intent(Receive.this,Congrats.class);
                     startActivity(intent);
-                    finish();
                 }
             }
         });

@@ -1,14 +1,7 @@
 package com.pkdev.ecard.model;
 
 public class Address {
-    String address;
-
-    public Address(){}
-
-    public Address(String address, String isCurrent) {
-        this.address = address;
-        this.isCurrent = isCurrent;
-    }
+    String address,type;
 
     public String getAddress() {
         return address;
@@ -18,13 +11,20 @@ public class Address {
         this.address = address;
     }
 
-    public String getIsCurrent() {
-        return isCurrent;
+    public String getType() {
+        return type;
     }
 
-    public void setIsCurrent(String isCurrent) {
-        this.isCurrent = isCurrent;
+    public void setType(String type) {
+        this.type = type;
     }
 
-    String isCurrent;
+    public Address(){
+
+    }
+
+    public Address(String address, String type) {
+        this.address = address;
+        this.type = type;
+    }
 }

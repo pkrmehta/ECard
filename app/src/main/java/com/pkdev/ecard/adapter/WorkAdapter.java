@@ -38,6 +38,9 @@ public class WorkAdapter extends RecyclerView.Adapter<WorkAdapter.TestViewHolder
     public void onBindViewHolder(@NonNull TestViewHolder holder, int position) {
         Work work = workList.get(position);
         holder.company.setText(work.getCompany());
+        holder.end.setText(work.getEnd());
+        holder.start.setText(work.getStart());
+        holder.position.setText(work.getPosition());
     }
 
     @Override
@@ -51,6 +54,9 @@ public class WorkAdapter extends RecyclerView.Adapter<WorkAdapter.TestViewHolder
         public TestViewHolder(View itemView) {
             super(itemView);
             company = (TextView) itemView.findViewById(R.id.listWork_company);
+            position = (TextView) itemView.findViewById(R.id.listWork_designation);
+            start = (TextView) itemView.findViewById(R.id.listWork_start);
+            end = (TextView) itemView.findViewById(R.id.listWork_end);
         }
     }
 }

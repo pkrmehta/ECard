@@ -1,42 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_marginTop="10dp">
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:orientation="vertical">
 
     <TextView
         android:id="@+id/listWork_designation"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:autoSizeTextType="uniform"
-        android:text="Designation"
         android:fontFamily="@font/balooda2_bold"
-        android:textSize="17dp"
-        android:textColor="@android:color/black"/>
+        android:text="Designation"
+        android:textColor="@android:color/black"
+        android:textSize="17dp" />
 
     <TextView
         android:id="@+id/listWork_company"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:autoSizeTextType="uniform"
-        android:text="Company"
         android:fontFamily="@font/balooda2_semibold"
-        android:textSize="17dp"
-        android:textColor="#0094FF"/>
+        android:text="Company"
+        android:textColor="#0094FF"
+        android:textSize="17dp" />
 
     <TextView
-        android:id="@+id/listWork_experience"
+        android:id="@+id/listWork_start"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:autoSizeTextType="uniform"
-        android:text="Experience"
         android:fontFamily="@font/balooda2_regular"
-        android:textSize="17dp"
-        android:textColor="@android:color/black"/>
+        android:text="Experience"
+        android:textColor="@android:color/black"
+        android:textSize="17dp" />
 
-
-
+    <TextView
+        android:id="@+id/listWork_end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autoSizeTextType="uniform"
+        android:fontFamily="@font/balooda2_regular"
+        android:text="Experience"
+        android:textColor="@android:color/black"
+        android:textSize="17dp" />
 
 
 </LinearLayout>

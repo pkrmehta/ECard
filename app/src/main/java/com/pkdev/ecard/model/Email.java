@@ -1,12 +1,12 @@
 package com.pkdev.ecard.model;
 
 public class Email {
-    String email;
-    String isprimary;
+    String email,type;
 
     public Email(){
 
     }
+
     public String getEmail() {
         return email;
     }
@@ -15,16 +15,16 @@ public class Email {
         this.email = email;
     }
 
-    public String getIsprimary() {
-        return isprimary;
+    public String getType() {
+        return type;
     }
 
-    public void setIsprimary(String isprimary) {
-        this.isprimary = isprimary;
+    public void setType(String type) {
+        this.type = type;
     }
 
-    public Email(String email, String isprimary) {
+    public Email(String email, String type) {
         this.email = email;
-        this.isprimary = isprimary;
+        this.type = type;
     }
 }

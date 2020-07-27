@@ -38,6 +38,7 @@ public class AddressAdapter extends RecyclerView.Adapter<AddressAdapter.TestView
     public void onBindViewHolder(@NonNull TestViewHolder holder, int position) {
         Address address = addressList.get(position);
         holder.address.setText(address.getAddress());
+        holder.type.setText(address.getType());
     }
 
     @Override
@@ -47,10 +48,11 @@ public class AddressAdapter extends RecyclerView.Adapter<AddressAdapter.TestView
 
     class TestViewHolder extends RecyclerView.ViewHolder
     {
-        TextView address;
+        TextView address,type;
         public TestViewHolder(View itemView) {
             super(itemView);
             address = (TextView) itemView.findViewById(R.id.listAddress_address);
+            type = (TextView) itemView.findViewById(R.id.listAddress_type);
         }
     }
 }

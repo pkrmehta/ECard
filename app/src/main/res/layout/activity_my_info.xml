@@ -231,6 +231,7 @@
                     android:id="@+id/myInfo_phoneList"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+
                     />
 
             </LinearLayout>
@@ -312,40 +313,39 @@
             </LinearLayout>
 
             <LinearLayout
-                android:paddingHorizontal="20dp"
-                android:layout_marginTop="50dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:layout_marginTop="50dp"
+                android:orientation="vertical"
+                android:paddingHorizontal="20dp">
 
                 <LinearLayout
-                    android:gravity="center_vertical"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
                     android:orientation="horizontal">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Email"
                         android:fontFamily="@font/balooda2_semibold"
-                        android:textSize="18dp"
-                        android:textColor="@android:color/black"/>
+                        android:text="Email"
+                        android:textColor="@android:color/black"
+                        android:textSize="18dp" />
 
                     <ImageButton
                         android:id="@+id/myInfo_emailAdd"
-                        android:layout_marginLeft="15dp"
                         android:layout_width="20dp"
                         android:layout_height="20dp"
-                        android:src="@drawable/add"/>
+                        android:layout_marginLeft="15dp"
+                        android:src="@drawable/add" />
 
                 </LinearLayout>
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/myInfo_emailList"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    />
+                    android:layout_height="wrap_content" />
 
             </LinearLayout>
 
@@ -386,11 +386,6 @@
                     />
 
             </LinearLayout>
-
-
-
-
-
 
 
         </LinearLayout>

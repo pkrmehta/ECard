@@ -44,8 +44,23 @@
         android:layout_marginLeft="10dp"
         android:paddingHorizontal="10dp"
         android:inputType="textEmailAddress"
-        android:id="@+id/popupWork_experience"
+        android:id="@+id/popupWork_start"
         android:hint="Experience"/>
+
+    <EditText
+        android:maxLength="10"
+        android:layout_marginTop="10dp"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:paddingHorizontal="10dp"
+        android:inputType="textEmailAddress"
+        android:id="@+id/popupWork_end"
+        android:hint="Experience"/>
+    <CheckBox
+        android:id="@+id/popupWork_isCurrent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
 
 
     <LinearLayout
